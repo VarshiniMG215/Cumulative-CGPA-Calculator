@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #6366f1;
+    --bg-color: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --text-main: #1e293b;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+    background-attachment: fixed;
+    margin: 0;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Glass Card Effect */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.course-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 45px;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgb(243, 237, 237);
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-add-sem { background: white; color: var(--primary-color); padding: 12px 24px; }
+.btn-add { background: #10b981; color: white; margin-top: 10px; padding: 10px; }
+.btn-remove { background: #fee2e2; color: #ef4444; }
+.btn-main { 
+    background: var(--primary-color); 
+    color: white; 
+    width: 100%; 
+    padding: 18px; 
+    font-size: 1.2rem; 
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.delete-sem { background: none; color: #ef4444; text-decoration: underline; font-size: 13px; }
+
+.final-result {
+    margin-top: 30px;
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#cgpa-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fbbf24;
+}
+
+.result-badge {
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+}

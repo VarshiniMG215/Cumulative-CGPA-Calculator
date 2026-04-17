@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA & CGPA Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Academic Performance Tracker</h1>
+        <p>Calculate your SGPA per semester and overall CGPA</p>
+    </header>
+    
+    <div class="controls">
+        <button class="btn-add-sem" onclick="addSemester()">+ Add New Semester</button>
+    </div>
+
+    <div id="semester-list">
+        </div>
+
+    <div class="action-footer">
+        <button class="btn-main" onclick="calculateEverything()">Calculate Final CGPA</button>
+    </div>
+
+    <div id="final-cgpa-container" class="final-result" style="display: none;">
+        <h3>Cumulative CGPA</h3>
+        <div id="cgpa-value">0.00</div>
+    </div>
+</div>
+
+<script src="first.js"></script>
+</body>
+</html>
